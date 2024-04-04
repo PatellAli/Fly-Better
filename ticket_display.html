@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="ticket_display.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicketDisplay</title>
+</head>
+<body>
+    <nav>
+        <button id="downloadPDF">Download PDF</button>
+    </nav>
+
+
+        <div id="ticketdisplay">
+            <!-- <div class="ticket">
+                <div class="logo">
+                    <span id="image"></span>
+                </div>
+                <div class="fr">
+                    <p>FROM<br><span id="from">Dubai</span></p>
+                </div>
+                <div class="to">
+                    <p>TO <br><span id="to">Mumbai</span></p>
+                </div>
+                <div class="passenger">
+                    <p>PASSENGER NAME<br><span id="pass">ali</span></p>
+                </div>
+                <div class="dep">
+                    <p>DEPARTURE <br><span id="Dep"></span><br><span id="depdate"></span></p>
+                </div>
+                <div class="arr">
+                    <p>ARRIVAL <br><span id="Arr"></span><br><span id="arrdate"></span></p>
+                </div>
+                <div class="gate">
+                    <p>Gate <br><span id="gatenumber"></span></p>
+                </div>
+                <div class="seatnum">
+                    <p>Seat <br><span id="seatnumber"></span></p>
+                    
+                </div>
+            </div> -->
+        </div> 
+  
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-g77bZKU4ktH2I5nNioWzOMcbd3fN/svB0vQM73Uo5GRn/EGfcSJB0DlR1ithxnFsDaa0HmlOwHYiUFeM1P3RRw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+
+    <!-- <script src="ticket_display.js"></script> -->
+    <script>
+                // Retrieve ticket data array from local storage
+   
+
+let passengers = JSON.parse(localStorage.getItem('passengers')) || [];
+let seats = JSON.parse(localStorage.getItem('selectedSeats')) || [];
+var img = localStorage.getItem('imageSrc');
+var from = localStorage.getItem('From');
+var to = localStorage.getItem('To');
+var Depdate = localStorage.getItem('departureDate');
+var Arrdate = localStorage.getItem('ArrivalDate');
+var deptime = localStorage.getItem('deptime');
+ var arrtime = localStorage.getItem('arrtime');
+
+
+
+// Display tickets for each passenger
+let ticketContainer = document.getElementById('ticketdisplay');
+passengers.forEach((passenger, index) => {
+    let selectedSeat = seats[index];    
+    let ticketHTML = `
+
+
+        <div id="ticketdisplay">
+        <div class="ticket">
+            <div class="logo">
+                <span id="image"><img src="${img}"></span>
+            </div>
+            <div class="fr">
+           <p>FROM<br><span id="from">${from}</span></p>
+            </div>
+            <div class="to">
+                <p>TO <br><span id="to">${to}</span></p>
+            </div>
+            <div class="passenger">
+                <p>PASSENGER NAME<br><span id="pass">${passenger.name}</span></p>
+            </div>
+            <div class="dep">
+                <p>DEPARTURE <br><span id="Dep">${deptime}</span><br><span id="depdate">${Depdate}</span></p>
+            </div>
+            <div class="arr">
+                <p>ARRIVAL <br><span id="Arr">${arrtime}</span><br><span id="arrdate"></span></p>
+            </div>
+            <div class="gate">
+                <p>Gate <br><span id="gatenumber">N/A</span></p>
+            </div>
+            <div class="seatnum">
+                <p>Seat <br><span id="seatnumber">${selectedSeat}</span></p>
+
+            </div>
+            <div class="ret">
+                <p>Returning <br> <span id="ret">${Arrdate}</span><p>
+                </div>
+        </div>
+    </div>
+    `;
+    ticketContainer.innerHTML += ticketHTML;
+});
+// document.getElementById('downloadPDF').addEventListener('click', function() {
+//     // Create new jsPDF instance
+//     const pdf = new jsPDF();
+
+//     // Add HTML content from ticket display div to PDF
+//     pdf.html(ticketContainer, {
+//         callback: function(pdf) {
+//             // Save PDF with filename "tickets.pdf"
+//             pdf.save('tickets.pdf');
+//         }
+//     });
+// });
+document.getElementById('downloadPDF').addEventListener('click', function() {
+    // Select the ticket display element
+    const element = document.getElementById('ticketdisplay');
+
+    const opt = {
+        margin:        0.5,
+        filename:     'tickets.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 1 },
+        jsPDF:        { unit: 'cm', format: 'a4', orientation: 'landscape' }
+    };
+
+    // Convert the element to PDF
+    html2pdf().set(opt).from(element).save();
+});
+    </script>
+</body>
+</html>

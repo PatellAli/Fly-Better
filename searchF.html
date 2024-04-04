@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Flights</title>
+    <link rel="stylesheet" href="searchF.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav">
+            <div class="logo">
+            <img src="/images/pngwing.com (5).png" alt="logo" width="80" height="80"/>
+        </div>
+        <div class="nav1">
+
+            <ul class="link">
+                
+                <li><a href="index.html">Book</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+              
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <div class="con">
+        <div class="con1">
+            <p>Outbound, <span id="From2"></span> to <span id="To2"></span></p>
+
+            <div class="f1" id="f1">
+                <div class="img1">
+                    <img src="images/emirates.png" alt="" width="180px" height="80%">
+               
+                </div>
+                <div class="v"></div>
+                <p style="margin-right: 30px;"><span id="Dname" ></span><br> International Airport <br> <b><span class="time1">11:20pm</span> </b></p>
+                <div class="ic" style="rotate: 90deg;">
+                    <i class="bi bi-airplane-fill" style="font-size: 40px; color: orange;" ></i>
+                </div>
+                <p style="margin-left: 30px;"><span id="Aname"></span> <br> International Airprot <br> <b><span class="time2">5:00pm</span></b></p>
+
+                
+                    <input type="button" value="Book" id="book"  onclick="next(this)"  style="margin-left: 100px;">
+                
+           
+            </div>
+
+            <div class="f2">
+                <div class="img2">
+                    <img src="/images/british.png" alt="" width="180px" height="80%">
+                </div>
+                <div class="v"></div>
+                <p style="margin-right: 30px;"><span id="Dname1" ></span><br> International Airport <br> <b><span class="time1">1:00am</span> </b></p>
+                <div class="ic" style="rotate: 90deg;">
+                    <i class="bi bi-airplane-fill" style="font-size: 40px; color: orange;" ></i>
+                </div>
+                <p style="margin-left: 30px;"><span id="Aname1"></span> <br> International Airprot <br> <b><span class="time2">7:10am</span></b></p>
+                <input type="button" value="Book" id="book"  onclick="next(this)"  style="margin-left: 100px;">
+
+            </div>
+
+            <div class="f3">
+                <div class="img3">
+                    <img src="/images/air India.png" alt="" width="180px" height="80%">
+                </div>
+                <div class="v"></div>
+                <p style="margin-right: 30px;"><span id="Dname2" ></span><br> International Airport <br> <b><span class="time1">6:30am</span> </b></p>
+                <div class="ic" style="rotate: 90deg;">
+                    <i class="bi bi-airplane-fill" style="font-size: 40px; color: orange;" ></i>
+                </div>
+                <p style="margin-left: 30px;"><span id="Aname2"></span> <br> International Airprot <br> <b><span class="time2">10:00am</span></b></p>
+                <input type="button" value="Book" id="book" onclick="next(this)"  style="margin-left: 100px;">
+            </div>
+
+            <div class="f4">
+                <div class="img4">
+                    <img src="/images/emirates.png" alt="" width="180px" height="80%">
+                </div>
+                <div class="v"></div>
+                <p style="margin-right: 30px;"><span id="Dname3" ></span><br> International Airport <br> <b><span class="time1">11:30pm</span> </b></p>
+                <div class="ic" style="rotate: 90deg;">
+                    <i class="bi bi-airplane-fill" style="font-size: 40px; color: orange;" ></i>
+                </div>
+                <p style="margin-left: 30px;"><span id="Aname3"></span> <br> International Airprot <br> <b><span class="time2">3:40am</span></b></p>
+                <input type="button" value="Book" id="book"  onclick="next(this)"  style="margin-left: 100px;">
+            </div>
+        </div>
+
+
+        <div class="con2">
+            <p>Inbound, <span id="To3"></span> to <span id="From3"></span></p>
+            <div class="i1">
+                <div class="img5">
+                    <img src="/images/british.png" alt="" width="180px" height="80%">
+                </div>
+                <div class="v"></div>
+                <p style="margin-right: 30px;"><span id="Aname4" ></span><br> International Airport <br> <b><span class="time1">5:30am</span> </b></p>
+                <div class="ic" style="rotate: 90deg;">
+                    <i class="bi bi-airplane-fill" style="font-size: 40px; color: orange;" ></i>
+                </div>
+                <p style="margin-left: 30px;"><span id="Dname4"></span> <br> International Airprot <br> <b><span class="time2">9:00am</span></b></p>
+                <input type="button" value="Book" id="book"  onclick="next(this)" style="margin-left: 100px;">
+
+            </div>
+            <div class="i2">
+                <div class="img6">
+                    <img src="/images/air India.png" alt="" width="180px" height="80%">
+                </div>
+                <div class="v"></div>
+                <p style="margin-right: 30px;"><span id="Aname5" ></span><br> International Airport <br> <b><span class="time1">5:00pm</span> </b></p>
+                <div class="ic" style="rotate: 90deg;">
+                    <i class="bi bi-airplane-fill" style="font-size: 40px; color: orange;" ></i>
+                </div>
+                <p style="margin-left: 30px;"><span id="Dname5"></span> <br> International Airprot <br> <b><span class="time2">9:10pm</span></b></p>
+                <input type="button" value="Book" id="book" onclick="next(this)" style="margin-left: 100px;">
+
+            </div>
+            <div class="i3">
+                <div class="img7">
+                    <img src="/images/air India.png" alt="" width="180px" height="80%">
+                </div>
+                <div class="v"></div>
+                <p style="margin-right: 30px;"><span id="Aname6" ></span><br> International Airport <br> <b><span class="time1">10:00am</span> </b></p>
+                <div class="ic" style="rotate: 90deg;">
+                    <i class="bi bi-airplane-fill" style="font-size: 40px; color: orange;" ></i>
+                </div>
+                <p style="margin-left: 30px;"><span id="Dname6"></span> <br> International Airprot <br> <b><span class="time2">3:40pm</span></b></p>
+                <input type="button" value="Book" id="book"  onclick="next(this)"  style="margin-left: 100px;">
+
+            </div>
+            <div class="i4">
+                <div class="img8">
+                    <img src="/images/emirates.png" alt="" width="180px" height="80%">
+                </div>
+                <div class="v"></div>
+                <p style="margin-right: 30px;"><span id="Aname7" ></span><br> International Airport <br> <b><span class="time1">8:00pm</span> </b></p>
+                <div class="ic" style="rotate: 90deg;">
+                    <i class="bi bi-airplane-fill" style="font-size: 40px; color: orange;" ></i>
+                </div>
+                <p style="margin-left: 30px;"><span id="Dname7"></span> <br> International Airprot <br> <b><span class="time2">12:30am</span></b></p>
+             
+
+                    <input type="button" value="Book" id="book" onclick="next(this)" style="margin-left: 100px;">
+                
+
+            </div>
+
+        </div>
+    </div>
+    <script src="searchF.js"></script>
+</body>
+</html>

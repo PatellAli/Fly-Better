@@ -1,0 +1,113 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+nav{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(39, 39, 39);
+}
+
+input[type=text],select{
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+
+    margin: 10px;
+    width:100% ;
+    height:40px;
+    cursor: pointer;
+    border: 1px solid orange;
+    border-radius: 10px 0px 10px 0px;
+}
+input[type=number],select{
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+
+    margin: 10px;
+    width:100% ;
+    height:40px;
+    cursor: pointer;
+    border: 1px solid orange;
+    border-radius: 10px 0px 10px 0px;
+}
+input[type=email],select{
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 10px;
+    width:100% ;
+    height:40px;
+    cursor: pointer;
+    border: 1px solid orange;
+    border-radius: 10px 0px 10px 0px;
+}
+input[type=submit],select{
+
+    background-color: orange;
+    width: 30%;
+    padding: 20px 20px;
+    margin-left: 38%;
+    margin-top: 20px;
+
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 20px 0px 20px 0px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    font-size: large;
+    cursor: pointer;
+    transition: .2s;
+    
+  }
+  input[type=submit]:hover{
+    transform: scale(1.1);
+  }
+h3{
+    margin-top: 20px;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+}
+label{
+    font-size: 20px;
+}
+.SeaT{
+    display: flex;
+    font-family: 'Courier New', Courier, monospace;
+
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(233, 233, 233);
+    padding: 10px;
+}
+.SeaT p{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.Details{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+margin-top: 50px;
+margin-left:10%;
+    width: 80%;
+    height: 79vh;
+  
+}
+#PassDetails{
+    width: 40%;
+    height: 100%;
+
+}
+#PassDetails{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 300;
+}
