@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const loginLink = document.getElementById('login-link');
+            
+// Check if an email is stored in localStorage
+const email = localStorage.getItem('Email');
+
+// If an email is found, change the text of the login link to "Logout"
+if (email) {
+    loginLink.textContent = 'Logout';
+    
+    // Optionally, you can update the href attribute to handle logout
+    // loginLink.href = '#'; // Set this to the logout URL or function if needed
+}
     // Code to run after the DOM content has loaded
     const From1 = localStorage.getItem('From');
     const To1 = localStorage.getItem('To');

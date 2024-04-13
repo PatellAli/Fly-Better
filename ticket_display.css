@@ -174,3 +174,21 @@ font-weight: bold;
     font-weight: bold;
 
 }
+#downloadPDF{
+    background-color: orange;
+    width: 10%;
+    padding: 20px 20px;
+    margin-left:45% ;
+    margin-top: 20px;
+    display: inline-block;
+    border:none;
+    border-radius: 20px 0px 20px 0px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    font-size: large;
+    cursor: pointer;
+    transition: .2s;
+}
+#downloadPDF:hover{
+transform: scale(1.1);
+}

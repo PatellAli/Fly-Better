@@ -21,7 +21,7 @@
                 <li><a href="index.html">Book</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Login</a></li>
+                <li><a id="login-link" href="login.html">Login</a></li>
             </ul>
         </div>
         </div>
@@ -67,7 +67,7 @@
             <div class="content3">
                 <p style="font-size: 50px; font-family:Kaushan Script, cursive; color: rgb(62, 62, 62);">Facebook</p>
                 <div class="line" style="margin-left: 55px;"></div>
-                <p style="margin-top: 30px; ">Reach out to us on the official Instragram account for Hawa Hawai. <br>Get latest update on our Instagram account.</p>
+                <p style="margin-top: 30px; ">Reach out to us on the official Facebook account for Hawa Hawai. <br>Get latest update also on our Facebook account.</p>
             </div>
         </div>
     </div>
@@ -104,5 +104,22 @@
                 <p>&copy All rights reserved</p>
         </div>
     </footer> 
+    <!-- <script src="/login.js"></script> -->
+    <script>
+        const loginLink = document.getElementById('login-link');
+            
+            // Check if an email is stored in localStorage
+            const email = localStorage.getItem('Email');
+            
+            // If an email is found, change the text of the login link to "Logout"
+            if (email) {
+                loginLink.textContent = 'Logout';
+                
+                // Optionally, you can update the href attribute to handle logout
+                // loginLink.href = '#'; // Set this to the logout URL or function if needed
+            }
+    </script>
+ 
+
 </body>
 </html>
